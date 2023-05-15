@@ -1,2 +1,2 @@
-echo "R"
-echo >> r
+R
+
