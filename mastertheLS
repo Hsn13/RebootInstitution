@@ -1,1 +1,1 @@
-ls -p | grep -vE "/$|^\." | xargs -d '\n' stat --format '%X %n' | sort -rn | cut -d' ' -f2 | sed -e 's/^\.\//.\//' -e 's/\//\/,/g' -e 's/,$//' -e 's/$/\//' | tr '\n' ','
+ls -p | grep -vE "/$|^\." | xargs -d '\n' stat --format '%Y %n' | sort -rn | cut -d' ' -f2 | sed -e 's/^\.\//.\//' -e 's/\//\/,/g' -e 's/,$//' -e 's/$/\//' | paste -sd ',' -
