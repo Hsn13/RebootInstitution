@@ -1,1 +1,1 @@
-echo "1,2,3,4,5,6,7,8,9"
+ls -Ap | grep -vE "/\.$|/\.\.$" | xargs -d '\n' stat --format '%X %n' | sort -n | cut -d' ' -f2 | sed -e 's/^\.\//.\//' -e 's/\//\/,/g' -e 's/,$//' -e 's/,$/\//' | tr '\n' ','
