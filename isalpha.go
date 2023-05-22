@@ -2,7 +2,7 @@ package piscine
 
 func IsAlpha(s string) bool {
 	if s == "" {
-		return true
+		return false
 	}
 	for _, s := range s {
 		if !((s >= 48 && s <= 57) || (s >= 65 && s <= 90) || (s >= 97 && s <= 122)) {
