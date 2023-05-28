@@ -1,7 +1,7 @@
 package piscine
 
-func SplitWhiteSpaces(str string) []string {
-	runes := []rune(str)
+func SplitWhiteSpaces(s string) []string {
+	runes := []rune(s)
 	counter := 0
 	for _, val := range runes {
 		if val == ' ' || val == '\t' || val == '\n' {
